@@ -76,3 +76,19 @@ test("test at method", () => {
         expect(list.at(i).value).toBe(i + 1);
     }
 });
+
+test("test pop method", () => {
+    const list = new LinkedListClass();
+
+    for (let i = 0; i < 20; i++) {
+        list.append(i);
+    }
+    for (let i = 19; i >= 0; i--) {
+        expect(list.tail().value).toBe(i);
+        expect(list.size()).toBe(i + 1);
+        list.pop();
+    }
+    expect(list.tail()).toBeNull();
+    expect(list.head()).toBeNull();
+    expect(list.size()).toBe(0);
+});

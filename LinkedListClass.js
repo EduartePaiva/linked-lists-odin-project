@@ -101,4 +101,8 @@ export class LinkedListClass {
         }
         return headCopy;
     }
+    /**
+     * removes the last element from the list
+     */
+    pop() {}
 }
