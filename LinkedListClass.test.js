@@ -125,3 +125,18 @@ test("test find method", () => {
     expect(list.find(554545)).toBe(1);
     expect(list.find(-554545)).toBeNull();
 });
+test("test toString method", () => {
+    const list = new LinkedListClass();
+    expect(list.toString()).toEqual("null");
+
+    list.append(10);
+    list.append(20);
+    list.append(30);
+    list.append(40);
+    list.append(50);
+    list.append(60);
+
+    expect(list.toString()).toEqual(
+        "( 10 ) -> ( 20 ) -> ( 30 ) -> ( 40 ) -> ( 50 ) -> ( 60 ) -> null",
+    );
+});

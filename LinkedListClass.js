@@ -165,7 +165,21 @@ export class LinkedListClass {
             index++;
             temp = temp.nextNode;
         }
-
         return null;
+    }
+    /**
+     * represents your LinkedList objects as strings
+     * @returns {string} The format should be: ( value ) -> ( value ) -> ( value ) -> null
+     */
+    toString() {
+        let string = "";
+        let temp = this._head;
+        while (temp !== null) {
+            string += `( ${temp.value} ) -> `;
+            temp = temp.nextNode;
+        }
+
+        string += "null";
+        return string;
     }
 }
