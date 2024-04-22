@@ -152,4 +152,20 @@ export class LinkedListClass {
         }
         return false;
     }
+    /**
+     *returns the first index of the node containing value, or null if not found.
+     * @param {number} value number to search
+     * @returns {number | null} index number or null
+     */
+    find(value) {
+        let index = 0;
+        let temp = this._head;
+        while (temp !== null) {
+            if (temp.value === value) return index;
+            index++;
+            temp = temp.nextNode;
+        }
+
+        return null;
+    }
 }

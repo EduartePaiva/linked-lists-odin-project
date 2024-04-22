@@ -111,3 +111,17 @@ test("test contains method", () => {
     expect(list.contains(554545)).toBeTruthy();
     expect(list.contains(-554545)).toBeFalsy();
 });
+test("test find method", () => {
+    const list = new LinkedListClass();
+    expect(list.find(5)).toBeNull();
+    list.prepend(554545);
+    list.append(20);
+    list.prepend(10);
+    list.append(554545);
+    list.append(55);
+
+    expect(list.find(55)).toBe(4);
+    expect(list.find(10)).toBe(0);
+    expect(list.find(554545)).toBe(1);
+    expect(list.find(-554545)).toBeNull();
+});
