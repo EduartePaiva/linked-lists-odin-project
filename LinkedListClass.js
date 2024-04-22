@@ -137,4 +137,19 @@ export class LinkedListClass {
         this._tail = temp.nextNode;
         this._beforeTail = temp;
     }
+    /**
+     * returns true if the passed in value is in the list and otherwise returns false.
+     * @param {number} value number to compare
+     * @returns {boolean} bool value
+     */
+    contains(value) {
+        let temp = this._head;
+        while (temp !== null) {
+            if (temp.value === value) {
+                return true;
+            }
+            temp = temp.nextNode;
+        }
+        return false;
+    }
 }

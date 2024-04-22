@@ -92,3 +92,22 @@ test("test pop method", () => {
     expect(list.head()).toBeNull();
     expect(list.size()).toBe(0);
 });
+
+test("test contains method", () => {
+    const list = new LinkedListClass();
+    expect(list.contains(5)).toBeFalsy();
+    list.prepend(554545);
+    list.append(554545);
+    list.append(554545);
+    list.append(554545);
+    list.append(554545);
+    list.prepend(10);
+    list.append(554545);
+    list.append(554545);
+    list.append(55);
+
+    expect(list.contains(55)).toBeTruthy();
+    expect(list.contains(10)).toBeTruthy();
+    expect(list.contains(554545)).toBeTruthy();
+    expect(list.contains(-554545)).toBeFalsy();
+});
