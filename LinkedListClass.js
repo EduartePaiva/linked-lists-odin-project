@@ -104,5 +104,37 @@ export class LinkedListClass {
     /**
      * removes the last element from the list
      */
-    pop() {}
+    pop() {
+        if (this._head === null) {
+            return;
+        }
+        this._size--;
+
+        if (this._beforeTail !== null) {
+            this._beforeTail.nextNode = null;
+            this._tail = this._beforeTail;
+            this._beforeTail = null;
+            return;
+        }
+
+        if (this._head.nextNode === null) {
+            this._beforeTail = null;
+            this._tail = null;
+            this._head = null;
+            return;
+        }
+
+        if (this._head.nextNode.nextNode === null) {
+            this._tail = this._head;
+            this._head.nextNode = null;
+            return;
+        }
+        let temp = this._head;
+        while (temp.nextNode.nextNode.nextNode !== null) {
+            temp = temp.nextNode;
+        }
+        temp.nextNode.nextNode = null;
+        this._tail = temp.nextNode;
+        this._beforeTail = temp;
+    }
 }
