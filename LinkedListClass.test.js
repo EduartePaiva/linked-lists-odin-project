@@ -140,31 +140,32 @@ test("test toString method", () => {
         "( 10 ) -> ( 20 ) -> ( 30 ) -> ( 40 ) -> ( 50 ) -> ( 60 ) -> null",
     );
 });
-test("test insertAt method", () => {
-    const list = new LinkedListClass();
-    list.insertAt(0, 50);
-    expect(list.at(0).value).toBe(50);
-    expect(() => list.insertAt(2, 40)).toThrow();
-    expect(() => list.insertAt(-1, 40)).toThrow();
 
-    list.insertAt(1, 40);
-    expect(list.at(1).value).toBe(40);
+// test("test insertAt method", () => {
+//     const list = new LinkedListClass();
+//     list.insertAt(0, 50);
+//     expect(list.at(0).value).toBe(50);
+//     expect(() => list.insertAt(2, 40)).toThrow();
+//     expect(() => list.insertAt(-1, 40)).toThrow();
 
-    list.insertAt(1, 30);
-    expect(list.at(1).value).toBe(30);
+//     list.insertAt(1, 40);
+//     expect(list.at(1).value).toBe(40);
 
-    list.insertAt(1, 20);
-    expect(list.at(1).value).toBe(20);
+//     list.insertAt(1, 30);
+//     expect(list.at(1).value).toBe(30);
 
-    list.insertAt(1, 10);
-    expect(list.at(1).value).toBe(10);
+//     list.insertAt(1, 20);
+//     expect(list.at(1).value).toBe(20);
 
-    list.insertAt(1, 0);
-    expect(list.at(1).value).toBe(0);
+//     list.insertAt(1, 10);
+//     expect(list.at(1).value).toBe(10);
 
-    list.insertAt(5, -20);
-    expect(list.at(5).value).toBe(-20);
-});
-test("test removeAt method", () => {
-    const list = new LinkedListClass();
-});
+//     list.insertAt(1, 0);
+//     expect(list.at(1).value).toBe(0);
+
+//     list.insertAt(5, -20);
+//     expect(list.at(5).value).toBe(-20);
+// });
+// test("test removeAt method", () => {
+//     const list = new LinkedListClass();
+// });

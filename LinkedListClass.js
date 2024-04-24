@@ -181,16 +181,16 @@ export class LinkedListClass {
         string += "null";
         return string;
     }
-    /**
-     *inserts a new node with the provided value at the given index
-     * @param {number} value value to insert at
-     * @param {number} index index to insert at
-     */
-    insertAt(value, index) {}
-    /**
-     * removes the node at the given index
-     * @param {number} index index of the node to remove
-     * @throws {RangeError} if index is negative or is >= size of the list
-     */
-    removeAt(index) {}
+    // /**
+    //  *inserts a new node with the provided value at the given index
+    //  * @param {number} value value to insert at
+    //  * @param {number} index index to insert at
+    //  */
+    // insertAt(value, index) {}
+    // /**
+    //  * removes the node at the given index
+    //  * @param {number} index index of the node to remove
+    //  * @throws {RangeError} if index is negative or is >= size of the list
+    //  */
+    // removeAt(index) {}
 }
